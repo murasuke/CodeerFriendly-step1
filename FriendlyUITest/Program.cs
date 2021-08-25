@@ -14,7 +14,7 @@ class Program{
     [STAThread]
     public static void Main()
     {
-        //--- プロセス起動
+        //--- プロセス起動 操作対象プログラムのパスは適宜修正すること
         var path = System.IO.Path.Combine(Environment.CurrentDirectory, @"..\..\..\testExe\TestTargetExeForm.exe");
         var process = System.Diagnostics.Process.Start(path);
 
