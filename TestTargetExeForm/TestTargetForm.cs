@@ -45,19 +45,27 @@ namespace TestTargetExeForm
 
             if (rdoAdd.Checked)
             {
-                result = CalcLogic.Add(lhv, rhv);
+                result = lhv + rhv;
             }
             else if (rdoSub.Checked)
             {
-                result = CalcLogic.Sub(lhv, rhv);
+                result = lhv - rhv;
             }
             else if (rdoMul.Checked)
             {
-                result = CalcLogic.Mul(lhv, rhv);
+                result = lhv * rhv;
             }
             else if (rdoDiv.Checked)
             {
-                result = CalcLogic.Div(lhv, rhv);
+                if (rhv == 0)
+                {
+                    result = 0;
+                }
+                else
+                {
+                    result = lhv / rhv;
+                }
+                
             }
 
             textBox3.Text = result.ToString();
